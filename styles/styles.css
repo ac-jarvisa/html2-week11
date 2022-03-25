@@ -305,3 +305,53 @@ footer p{
 		margin-top:-60px;	
 	}
 }
+
+
+@media print{
+	/*************************************************
+					Print Styles
+	*************************************************/
+	html{
+		background:white;
+		color:black;
+	}
+
+	nav{
+		display:none;
+	}
+
+	section{
+		border:none;
+	}
+
+	.desc{
+		padding:0 5% 10px;
+	}
+
+	header{
+		width:100%;
+		height:230px;
+		overflow:hidden;
+	}
+
+	.imgMobile{
+		width:100%;
+		margin-top:-35px;
+	}
+}
+
+@media screen and (hover: none){
+	nav a{
+		background:rgba(34, 0, 68, 0.7);
+		border-top-right-radius:15px;
+		border-top-left-radius:15px;
+	}
+}
+
+/* using two conditions, we can make the switch to portrait only apply on mobile devices
+(which don't have a hover) */
+@media screen and (orientation: portrait) and (hover: none){
+	html{
+		background:rgb(150,150,150);
+	}
+}
